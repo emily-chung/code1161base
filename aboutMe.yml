@@ -4,5 +4,9 @@ gitHubUsername: emily-chung
 stackoverflow: http://stackoverflow.com/users/7788373/emilychung
 mediumUsername: emilychung_
 unswEmail: emilychung689@hotmail.com
+<<<<<<< HEAD
 realEmailFirstBit: emilychung689  # this avoids spam
+=======
+realEmailFirstBit: emilychung689
+>>>>>>> a167f631646c600d34d2b37f53759b6d99fc9f8b
 realEmailOtherBit: @hotmail.com
