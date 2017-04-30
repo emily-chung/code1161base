@@ -9,7 +9,7 @@ def is_odd(a_number):
 
     Look into modulo division using the '%' operator as one way of doing this.
     """
-    pass
+    return a_number % 2 > 0
 
 
 def fix_it(moves=True, should_move=True):
@@ -23,7 +23,14 @@ def fix_it(moves=True, should_move=True):
     "Duct Tape"
     "No Problem"
     """
-    pass
+    if moves == should_move:
+        return "No Problem"
+    elif moves and not should_move:
+        return "Duct Tape"
+    elif not moves and should_move:
+        return "WD-40"
+    else:
+        return "Buy something else"
 
 
 def loops_1a():
@@ -33,7 +40,10 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    pass
+    stars = []
+    for x in range(10):
+        stars.append("*")
+    return stars
 
 
 def star_map():
@@ -44,7 +54,13 @@ def star_map():
     if it's even. Reuse the is odd function that you've already written.
     E.g.: ["!", "*", "!", "*", "!", "*", "!", "*", "!", "*"]
     """
-    pass
+    def star_bang(a_number):
+        if is_odd(a_number) == True:
+            return "!"
+        else:
+            return "*"
+
+    return map(star_bang, range(10))
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -55,7 +71,11 @@ def loops_1c(number_of_items=5, symbol="#"):
     a string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    pass
+    hashtag = []
+    for i in range(5):
+        hashtag.append("#")
+
+    return hashtag
 
 
 def loops_2():
@@ -76,7 +96,14 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    pass
+    star_sq = []
+    for y in range(10):
+        stars = []
+        for x in range(10):
+                stars.append("*")
+        star_sq.append(stars)
+
+    return star_sq
 
 
 def loops_3():
@@ -100,7 +127,14 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    pass
+    number_sq = []
+    for x in range(10):
+            number_row = []
+            for y in range(10):
+                number_row.append(x)
+            number_sq.append(number_row)
+
+    return number_sq
 
 
 def loops_4():
@@ -118,7 +152,12 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    pass
+    block = []
+    for y in range(10):
+        single = range(10)
+        block.append(single)
+
+    return block
 
 
 def loops_5():
@@ -143,7 +182,14 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    pass
+    number_sq = []
+    for i in range(10):
+        coord_row = []
+        for j in range(5):
+            coord_row.append('(i{},j{})'.format(i, j))
+        number_sq.append(coord_row)
+
+    return number_sq
 
 
 def loops_6():
@@ -166,7 +212,14 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    pass
+    wedge = []
+    for x in range(1, 10):
+        row = []
+        for y in range(x):
+            row.append(y)
+        wedge.append(row)
+
+    return wedge
 
 
 def loops_7():
@@ -190,7 +243,10 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    pass
+    for x in range(5):
+        row = "*"*(2*x+1)
+
+    return row.center(9)
 
 
 def lp(some_kind_of_list, exercise_name):
