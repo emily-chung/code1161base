@@ -56,9 +56,9 @@ def star_map():
     """
     def star_bang(a_number):
         if is_odd(a_number) == True:
-            return "!"
-        else:
             return "*"
+        else:
+            return "!"
 
     return map(star_bang, range(10))
 
@@ -213,7 +213,7 @@ def loops_6():
     TIP: look out for the starting condition.
     """
     wedge = []
-    for x in range(1, 10):
+    for x in range(1, 11):
         row = []
         for y in range(x):
             row.append(y)
